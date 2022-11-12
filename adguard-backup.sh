@@ -1,12 +1,12 @@
 #!/bin/sh
-export BORG_REPO=/mnt/Sicherungen/Backup
+export BORG_REPO=Eurezuvor erstellte Borg Repo ex: /mnt/Sicherungen
 # Euer Passwort muss hier hinterlegt werden.
-export BORG_PASSPHRASE='Fabio2006!'
+export BORG_PASSPHRASE='euersicherespasswort'
  
 info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }
 trap 'echo $( date ) Backup unterbrochen >&2; exit 2' INT TERM
  
-info "Start backup"
+info "Backup gestartet"
  
 # Hier wird das Backup erstellt, passt das so an wie Ihr das gerne haben möchtet
 borg create                         \
@@ -41,3 +41,4 @@ else
 fi
  
 exit ${global_exit}
+Copyright by FD2022 2022
